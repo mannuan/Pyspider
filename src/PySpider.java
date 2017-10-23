@@ -1,4 +1,13 @@
-import java.awt.Robot;
+/**
+ * Copyright (c) 2017 - 2018 wjl, Inc.
+ *
+ *  You may obtain a copy of the License at:
+ *
+ *       http://xxxxxx
+ *
+ */
+
+import java.awt.*;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -7,7 +16,10 @@ import java.io.OutputStreamWriter;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.net.URLEncoder;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Random;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -15,12 +27,16 @@ public class PySpider {
 	
 	private String HOST = "127.0.0.1";
 	private int PORT = 5000;
-	private String UTF_8 = "UTF-8";
-	private Action ACTION = new Action();
 	private String END = "\r\n";
+	private Charset CHARSET = new Charset();
+	private Action ACTION = new Action();
+	public ObjectMapper OBJECTMAPPER = new ObjectMapper();
 	public Status STATUS = new Status();
 	public Format FORMAT = new Format();
-	
+
+	class Charset{
+		public String UTF_8 = "UTF-8";
+	}
 	class Action{
 		public String POST = "POST";
 		public String GET = "GET";
@@ -41,18 +57,50 @@ public class PySpider {
 	
 	PySpider(){
 	}
+	PySpider(String host){
+		this.HOST = host;
+	}
+	PySpider(int port){
+		this.PORT = port;
+	}
 	PySpider(String host,int port){
 		this.HOST = host;
 		this.PORT = port;
 	}
-		
-	@SuppressWarnings("resource")
-	public String doAction(String action,String path,String data) throws IOException{
+
+	/**
+	 * 生成要输出的数据
+	 * @param name
+	 * @param result
+	 * @return
+	 * @throws IOException
+	 */
+	private String generateData(String name,String type,Object result)throws IOException{
+		HashMap<String,Object> json = new HashMap<>();
+		json.put("name",name);
+		json.put("type",type);
+		json.put("result",result);
+		return this.OBJECTMAPPER.writeValueAsString(json);
+	}
+
+	//***********************************
+	// Socket HTTP Methods
+	//***********************************
+
+	/**
+	 * 使用socket进行post或get操作
+	 * @param action
+	 * @param path
+	 * @param data
+	 * @return
+	 * @throws IOException
+	 */
+	private String doAction(String action,String path,String data) throws IOException{
 		// 建立连接
 		InetAddress addr = InetAddress.getByName(this.HOST);
 		Socket socket = new Socket(addr, this.PORT);
 		// 发送数据头和数据头
-		BufferedWriter wr = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream(),this.UTF_8));
+		BufferedWriter wr = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream(),this.CHARSET.UTF_8));
 		if(action.equals(this.ACTION.POST)) {
 			String packet = String.format("%s %s HTTP/1.0%s"
 					+ "HOST:%s%s"
@@ -74,7 +122,7 @@ public class PySpider {
 		}
 		wr.flush();
 		// 读取返回信息
-		BufferedReader rd = new BufferedReader(new InputStreamReader(socket.getInputStream(),this.UTF_8));
+		BufferedReader rd = new BufferedReader(new InputStreamReader(socket.getInputStream(),this.CHARSET.UTF_8));
 		String result = new String();
 		String line = null;
 		while ((line = rd.readLine()) != null){
@@ -86,112 +134,272 @@ public class PySpider {
 		result = result.substring(result.indexOf("\n\n")+2, result.length());
 		return result.substring(0,result.length()-1);
 	}
-	
-	public String getHost(){
-		return this.HOST;
-	}
-	public int getPort(){
-		return this.PORT;
-	}
-	public String getSaveData(String script)throws IOException{
-		return "script="+URLEncoder.encode(script,this.UTF_8);
-	}
-	public String getRunData(String project)throws IOException{
-		String result = new String();
-		result += "webdav_mode=false&";
-		String task = String.format("{\"process\":{\"callback\":\"on_start\"}, \"project\":\"%s\", \"taskid\":\"data:,on_start\", \"url\":\"data:,on_start\"}",project);
-		result += "task="+URLEncoder.encode(task,this.UTF_8)+"&";
-		String a = this.GetScript(project);
-		ObjectMapper mapper = new ObjectMapper();
-		HashMap<String,String> b = mapper.readValue(a, HashMap.class);
-		String script = b.get("script");
-		result += "script="+URLEncoder.encode(script,this.UTF_8);
-		return result;
-	}
-	/*
-	 * 来自debug.py文件
+
+	//***********************************
+	// 来自debug.py文件
+	//***********************************
+
+	/**
+	 * 保存python脚本到服务器
+	 * 返回字符串的格式:string
+	 * @param project
+	 * @param script
+	 * @return
+	 * @throws IOException
 	 */
-	//保存python脚本到服务器
-	public String SaveScript(String project,String script)throws IOException{
-		return this.doAction(this.ACTION.POST,String.format("/debug/%s/save", project),this.getSaveData(script));
+	private String saveScript(String project,String script)throws IOException{
+		return this.doAction(this.ACTION.POST,String.format("/debug/%s/save", project),
+						"script="+URLEncoder.encode(script,this.CHARSET.UTF_8));
 	}
-	//从服务器下载python脚本
-	public String GetScript(String project)throws IOException{
+
+	/**
+	 * 从服务器下载python脚本
+	 * 返回字符串的格式:{"name":" ","script":" "}
+	 * @param project
+	 * @return
+	 * @throws IOException
+	 */
+	private String getScript(String project)throws IOException{
 		return this.doAction(this.ACTION.GET,String.format("/debug/%s/get", project),null);
 	}
-	//获取调试的html主页面
-	public String GetDebugHtml(String project)throws IOException{
+
+	/**
+	 * 获取调试的主页面
+	 * @param project
+	 * @return
+	 * @throws IOException
+	 */
+	public String getDebugPage(String project)throws IOException{
 		return this.doAction(this.ACTION.GET,String.format("/debug/%s", project),null);
 	}
-	//在调试界面运行项目
-	public String DebugRunProject(String project)throws IOException{
-		return this.doAction(this.ACTION.POST,String.format("/debug/%s/run", project),this.getRunData(project));
-	}
-	/*
-	 * 来自index.py文件
+
+	/**
+	 * 在调试界面运行项目
+	 * @param project
+	 * @return
+	 * @throws IOException
 	 */
-	//获取pyspider的html主页
-	public String GetIndexHtml() throws IOException{
+	public String debugProject(String project)throws IOException{
+		String data = new String();
+		data += "webdav_mode=false&";
+		String task = String.format("{\"process\":{\"callback\":\"on_start\"}, " +
+				"\"project\":\"%s\", " +
+				"\"taskid\":\"data:,on_start\", " +
+				"\"url\":\"data:,on_start\"}",project);
+		data += "task="+URLEncoder.encode(task,this.CHARSET.UTF_8)+"&";
+		String a = this.getScript(project);
+		HashMap<String,String> b = this.OBJECTMAPPER.readValue(a, HashMap.class);
+		String script = b.get("script");
+		data += "script="+URLEncoder.encode(script,this.CHARSET.UTF_8);
+		return this.generateData("debug","json_object",
+				this.OBJECTMAPPER.readValue(
+						this.doAction(this.ACTION.POST,String.format("/debug/%s/run", project), data),Object.class));
+	}
+
+	//***********************************
+	// 来自index.py文件
+	//***********************************
+
+	/**
+	 * 获取pyspider的主页
+	 * @return
+	 * @throws IOException
+	 */
+	public String getIndexPage() throws IOException{
 		return this.doAction(this.ACTION.GET,"/",null);
 	}
-	//改变项目的运行的状态
-	public String ChangeProjectStatus(String project,String status)throws IOException{
-		String data = "pk=" + URLEncoder.encode(project,this.UTF_8) + "&name=" + URLEncoder.encode("status",this.UTF_8) + "&value=" + URLEncoder.encode(status,this.UTF_8);
+
+	/**
+	 * 改变项目的运行的状态
+	 * 返回字符串的格式:string
+	 * @param project
+	 * @param status
+	 * @return
+	 * @throws IOException
+	 */
+	private String changeProjectStatus(String project,String status)throws IOException{
+		String data = "pk=" + URLEncoder.encode(project,this.CHARSET.UTF_8) +
+				"&name=" + URLEncoder.encode("status",this.CHARSET.UTF_8) +
+				"&value=" + URLEncoder.encode(status,this.CHARSET.UTF_8);
 		return this.doAction(this.ACTION.POST,"/update",data);
 	}
-	//运行爬虫项目
-	public String RunProject(String project) throws IOException{
-		String data = "project="+URLEncoder.encode(project,this.UTF_8);
-		return this.doAction(this.ACTION.POST,"/run",data);
-	}
-	//获取计数器
-	public String GetCounter() throws IOException{
-		return this.doAction(this.ACTION.GET,"/counter",null);
-	}
-	//获取队列
-	public String GetQueues() throws IOException{
-		return this.doAction(this.ACTION.GET,"/queues",null);
-	}
-	/*
-	 * 来自task.py文件
+
+	/**
+	 * 运行爬虫项目
+	 * @param project
+	 * @return
+	 * @throws IOException
 	 */
-	//根据项目的taskid获取任务的详细信息html页面
-	public String GetTaskHtml(String project,String taskid) throws IOException{
-		return this.doAction(this.ACTION.GET,"/task/"+project+":"+taskid,null);
-	}
-	//根据项目的taskid获取任务的详细信息的json格式的数据
-	public String GetTask(String project,String taskid) throws IOException{
-		return this.doAction(this.ACTION.GET,"/task/"+project+":"+taskid+".json",null);
-	}
-	//获取某个项目的所有任务html界面
-	public String GetTasksHtml(String project) throws IOException{
-		return this.doAction(this.ACTION.GET,"/tasks?project="+project,null);
-	}
-	//获取某个项目的所有激活任务html界面
-	public String GetActiveTasks(String project) throws IOException{
-		return this.doAction(this.ACTION.GET,"/active_tasks?project="+project,null);
-	}
-	/*
-	 * 来自result.py文件
-	 */
-	//获取某个项目的结果html界面
-	public String GetResultsHtml(String project) throws IOException{
-		return this.doAction(this.ACTION.GET,"/results?project="+project,null);
-	}
-	//根据输入的数据格式输出某个项目的结果
-	public String GetResultsFormat(String project,String format) throws IOException{
-		return this.doAction(this.ACTION.GET,"/results/dump/"+project+"."+format,null);
-	}
-	//一个典型的运行脚本爬虫的运行方式
-	public String StandardRun(String project,String script,String status) throws Exception{
-		HashMap<String,Object> result = new HashMap<>();
-		result.put("save_script", this.SaveScript(project, script));
-		result.put("change_project_status_to_running", this.ChangeProjectStatus(project, status));
+	public String runProject(String project) throws IOException,AWTException{
+		this.changeProjectStatus(project,this.STATUS.RUNNING);
 		Robot r = new Robot();//执行完上面一条必须等待改变项目的运行状态为运行，才可以正式运行项目
 		r.delay(100);//ms
-		ObjectMapper mapper = new ObjectMapper();
-		result.put("run_project", mapper.readValue(this.RunProject(project),HashMap.class));
-		return mapper.writeValueAsString(result);
+		String result = this.doAction(this.ACTION.POST,"/run","project="+URLEncoder.encode(project,this.CHARSET.UTF_8));
+		HashMap<String,String> map = this.OBJECTMAPPER.readValue(result,HashMap.class);
+		return this.generateData("run", "string",map.get("result"));
+	}
+
+	/**
+	 * 获取计数器
+	 * 返回字符串的格式:json object
+	 * @return
+	 * @throws IOException
+	 */
+	private String getCounter() throws IOException{
+		return this.doAction(this.ACTION.GET,"/counter",null);
+	}
+
+	/**
+	 * 获取队列
+	 * 返回字符串的格式:json object
+	 * @return
+	 * @throws IOException
+	 */
+	private String getQueues() throws IOException{
+		return this.doAction(this.ACTION.GET,"/queues",null);
+	}
+
+	//***********************************
+	// 来自task.py文件
+	//***********************************
+
+	/**
+	 * 根据项目的taskid获取任务的详细信息的页面
+	 * @param project
+	 * @param taskid
+	 * @return
+	 * @throws IOException
+	 */
+	public String getTaskPage(String project,String taskid) throws IOException{
+		return this.doAction(this.ACTION.GET,"/task/"+project+":"+taskid,null);
+	}
+
+	/**
+	 * 根据项目的taskid获取任务的详细信息的json格式的数据
+	 * 返回字符串的格式:json object
+	 * @param project
+	 * @param taskid
+	 * @return
+	 * @throws IOException
+	 */
+	public String getTask(String project,String taskid) throws IOException{
+		return this.doAction(this.ACTION.GET,"/task/"+project+":"+taskid+".json",null);
+	}
+
+	/**
+	 * 获取某个项目的所有任务的界面
+	 * @param project
+	 * @return
+	 * @throws IOException
+	 */
+	public String getTasksPage(String project) throws IOException{
+		return this.doAction(this.ACTION.GET,"/tasks?project="+project,null);
+	}
+
+	/**
+	 * 获取某个项目的所有激活任务的数据
+	 * 返回字符串的格式:json object
+	 * @param project
+	 * @return
+	 * @throws IOException
+	 */
+	private String getActiveTasks(String project) throws IOException{
+		return this.doAction(this.ACTION.GET,"/active_tasks?project="+project,null);
+	}
+
+	//***********************************
+	// 来自result.py文件
+	//***********************************
+
+	/**
+	 * 获取某个项目的结果的界面
+	 * @param project
+	 * @return
+	 * @throws IOException
+	 */
+	public String getResultsPage(String project) throws IOException{
+		return this.doAction(this.ACTION.GET,"/results?project="+project,null);
+	}
+
+	/**
+	 * 根据输入的数据格式输出某个项目的结果
+	 * 根据选择的格式输出数据
+	 * 如果是json数据则返回几行json对象用'\n'隔开
+	 * @param project
+	 * @param format
+	 * @return
+	 * @throws IOException
+	 */
+	private String getResultsFormat(String project,String format) throws IOException{
+		return this.doAction(this.ACTION.GET,"/results/dump/"+project+"."+format,null);
+	}
+
+	//***********************************
+	// 自定义方法
+	//***********************************
+
+	/**
+	 * 获取某个项目的taskid列表
+	 * @param project
+	 * @return
+	 * @throws IOException
+	 */
+	private ArrayList<String> getTaskIDArray(String project) throws IOException{
+		String[] arr = this.getResultsFormat(project,this.FORMAT.JSON).split("\n");
+		List<HashMap<String,Object>> list = new ArrayList<>();
+		ArrayList<String> results = new ArrayList<>();
+		for(String str:arr){
+			list.add(this.OBJECTMAPPER.readValue(str,HashMap.class));
+		}
+		for(HashMap<String,Object> map:list){
+			results.add((String)map.get("taskid"));
+		}
+		return results;
+	}
+
+	/**
+	 * 随机返回某个项目的taskid
+	 * @param project
+	 * @return
+	 * @throws IOException
+	 */
+	public String getRandomTaskID(String project)throws IOException{
+		ArrayList<String> list = this.getTaskIDArray(project);
+		Random random = new Random();
+		return list.get(random.nextInt(list.size()));
+	}
+
+	/**
+	 * 创建一个项目
+	 * @param project
+	 * @param script
+	 * @return
+	 * @throws IOException
+	 */
+	public String createProject(String project,String script)throws IOException{
+		return this.generateData("create","string",this.saveScript(project,script));
+	}
+
+	public String stopProject(String project,String script)throws IOException{
+		return this.generateData("stop","string",this.saveScript(project,script));
+	}
+
+	/**
+	 * 一个典型的运行脚本爬虫的运行方式
+	 * @param project
+	 * @param script
+	 * @param status
+	 * @return
+	 * @throws Exception
+	 */
+	public String StandardRun(String project,String script,String status) throws Exception{
+		List<Object> result = new ArrayList<>();
+		result.add(this.OBJECTMAPPER.readValue(this.saveScript(project, script),Object.class));
+		result.add(this.OBJECTMAPPER.readValue(this.changeProjectStatus(project, status),Object.class));
+		Robot r = new Robot();//执行完上面一条必须等待改变项目的运行状态为运行，才可以正式运行项目
+		r.delay(100);//ms
+		result.add(this.OBJECTMAPPER.readValue(this.runProject(project),HashMap.class));
+		return this.generateData("standard_run","json",result);
 	}
 	
 }

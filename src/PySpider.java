@@ -83,7 +83,8 @@ public class PySpider {
 		wr.close();
 		rd.close();
 		//去除socket返回数据包的头部信息
-		return result.substring(result.indexOf("\n\n")+2, result.length());
+		result = result.substring(result.indexOf("\n\n")+2, result.length());
+		return result.substring(0,result.length()-1);
 	}
 	
 	public String getHost(){

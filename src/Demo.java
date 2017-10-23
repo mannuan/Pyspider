@@ -16,14 +16,14 @@ public class Demo {
 //		System.out.println(pyspider.GetCounter());
 //		System.out.println(pyspider.GetQueues());
 		
-//		System.out.println(pyspider.GetTaskHtml("test127","27949a8adfe23fb84f600b3e562651d5"));
-//		System.out.println(pyspider.GetTask("test127","27949a8adfe23fb84f600b3e562651d5"));
+//		System.out.println(pyspider.GetTaskHtml("test127","57dd16861fbeeab46001fc9d4133b164"));
+//		System.out.println(pyspider.GetTask("test127","57dd16861fbeeab46001fc9d4133b164"));
 //		System.out.println(pyspider.GetTasksHtml("test127"));
 //		System.out.println(pyspider.GetActiveTasks("test127"));
 		
 //		System.out.println(pyspider.GetResultsHtml("test127"));
 //		System.out.println(pyspider.GetResultsFormat("test127",pyspider.FORMAT.JSON));
-		System.out.println(pyspider.StandardRun("test131",script1,pyspider.STATUS.RUNNING));
+		System.out.println(pyspider.StandardRun("test166",script1,pyspider.STATUS.RUNNING));
 	  }
 
 }

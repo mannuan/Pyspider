@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/jackson-databind-2.4.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/org.restlet.ext.jackson.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/jackson-dataformat-xml-2.4.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/jackson-dataformat-smile-2.4.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/jackson-core-2.4.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/jackson-annotations-2.4.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/jackson-dataformat-csv-2.4.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/jackson-dataformat-yaml-2.4.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/jackson-dataformat-cbor-2.4.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

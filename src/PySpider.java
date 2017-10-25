@@ -408,10 +408,4 @@ public class PySpider {
 		return this.generateResult("stop","string",this.changeProjectStatus(project,this.STATUS.STOP));
 	}
 
-	public String removeProject(String project)throws IOException{
-		this.changeProjectStatus(project,this.STATUS.STOP);
-		return this.generateResult("remove","string",
-				this.doAction(this.ACTION.POST,"/remove","project="+URLEncoder.encode(project,this.CHARSET.UTF_8)));
-	}
-	
 }

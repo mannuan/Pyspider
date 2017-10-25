@@ -20,7 +20,6 @@ public class Demo {
 		System.out.println(pyspider.debugProject("test127"));
 		System.out.println(pyspider.startProject("test127"));
 		System.out.println(pyspider.stopProject("test127"));
-//		System.out.println(pyspider.removeProject("test127"));
 
 	}
 

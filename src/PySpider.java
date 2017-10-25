@@ -75,10 +75,10 @@ public class PySpider {
 	 * @return
 	 * @throws IOException
 	 */
-	private String generateData(String name,String type,Object result)throws IOException{
+	private String generateResult(String name,String type,Object result)throws IOException{
 		HashMap<String,Object> json = new HashMap<>();
 		json.put("name",name);
-		json.put("type",type);
+		json.put("result_type",type);
 		json.put("result",result);
 		return this.OBJECTMAPPER.writeValueAsString(json);
 	}
@@ -179,7 +179,7 @@ public class PySpider {
 	 * @return
 	 * @throws IOException
 	 */
-	public String debugProject(String project)throws IOException{
+	private String debugRunProject(String project)throws IOException{
 		String data = new String();
 		data += "webdav_mode=false&";
 		String task = String.format("{\"process\":{\"callback\":\"on_start\"}, " +
@@ -187,13 +187,10 @@ public class PySpider {
 				"\"taskid\":\"data:,on_start\", " +
 				"\"url\":\"data:,on_start\"}",project);
 		data += "task="+URLEncoder.encode(task,this.CHARSET.UTF_8)+"&";
-		String a = this.getScript(project);
-		HashMap<String,String> b = this.OBJECTMAPPER.readValue(a, HashMap.class);
+		HashMap<String,String> b = this.OBJECTMAPPER.readValue(this.getScript(project), HashMap.class);
 		String script = b.get("script");
 		data += "script="+URLEncoder.encode(script,this.CHARSET.UTF_8);
-		return this.generateData("debug","json_object",
-				this.OBJECTMAPPER.readValue(
-						this.doAction(this.ACTION.POST,String.format("/debug/%s/run", project), data),Object.class));
+		return this.doAction(this.ACTION.POST,String.format("/debug/%s/run", project), data);
 	}
 
 	//***********************************
@@ -230,13 +227,8 @@ public class PySpider {
 	 * @return
 	 * @throws IOException
 	 */
-	public String runProject(String project) throws IOException,AWTException{
-		this.changeProjectStatus(project,this.STATUS.RUNNING);
-		Robot r = new Robot();//执行完上面一条必须等待改变项目的运行状态为运行，才可以正式运行项目
-		r.delay(100);//ms
-		String result = this.doAction(this.ACTION.POST,"/run","project="+URLEncoder.encode(project,this.CHARSET.UTF_8));
-		HashMap<String,String> map = this.OBJECTMAPPER.readValue(result,HashMap.class);
-		return this.generateData("run", "string",map.get("result"));
+	private String runProject(String project) throws IOException{
+		return this.doAction(this.ACTION.POST,"/run","project="+URLEncoder.encode(project,this.CHARSET.UTF_8));
 	}
 
 	/**
@@ -282,7 +274,7 @@ public class PySpider {
 	 * @return
 	 * @throws IOException
 	 */
-	public String getTask(String project,String taskid) throws IOException{
+	private String getTask(String project,String taskid) throws IOException{
 		return this.doAction(this.ACTION.GET,"/task/"+project+":"+taskid+".json",null);
 	}
 
@@ -363,7 +355,7 @@ public class PySpider {
 	 * @return
 	 * @throws IOException
 	 */
-	public String getRandomTaskID(String project)throws IOException{
+	protected String getRandomTaskID(String project)throws IOException{
 		ArrayList<String> list = this.getTaskIDArray(project);
 		Random random = new Random();
 		return list.get(random.nextInt(list.size()));
@@ -377,29 +369,49 @@ public class PySpider {
 	 * @throws IOException
 	 */
 	public String createProject(String project,String script)throws IOException{
-		return this.generateData("create","string",this.saveScript(project,script));
-	}
-
-	public String stopProject(String project,String script)throws IOException{
-		return this.generateData("stop","string",this.saveScript(project,script));
+		return this.generateResult("create","string",this.saveScript(project,script));
 	}
 
 	/**
-	 * 一个典型的运行脚本爬虫的运行方式
+	 * 调试一个项目
 	 * @param project
-	 * @param script
-	 * @param status
 	 * @return
-	 * @throws Exception
+	 * @throws IOException
 	 */
-	public String StandardRun(String project,String script,String status) throws Exception{
-		List<Object> result = new ArrayList<>();
-		result.add(this.OBJECTMAPPER.readValue(this.saveScript(project, script),Object.class));
-		result.add(this.OBJECTMAPPER.readValue(this.changeProjectStatus(project, status),Object.class));
+	public String debugProject(String project)throws IOException{
+		return this.generateResult("debug","json_object",
+				this.OBJECTMAPPER.readValue(this.debugRunProject(project),Object.class));
+	}
+
+	/**
+	 * 开启一个项目
+	 * @param project
+	 * @return
+	 * @throws IOException
+	 * @throws AWTException
+	 */
+	public String startProject(String project)throws IOException,AWTException{
+		this.changeProjectStatus(project,this.STATUS.RUNNING);
 		Robot r = new Robot();//执行完上面一条必须等待改变项目的运行状态为运行，才可以正式运行项目
 		r.delay(100);//ms
-		result.add(this.OBJECTMAPPER.readValue(this.runProject(project),HashMap.class));
-		return this.generateData("standard_run","json",result);
+		HashMap<String,String> map = this.OBJECTMAPPER.readValue(this.runProject(project),HashMap.class);
+		return this.generateResult("run", "string",map.get("result"));
+	}
+
+	/**
+	 * 停止一个项目
+	 * @param project
+	 * @return
+	 * @throws IOException
+	 */
+	public String stopProject(String project)throws IOException{
+		return this.generateResult("stop","string",this.changeProjectStatus(project,this.STATUS.STOP));
+	}
+
+	public String removeProject(String project)throws IOException{
+		this.changeProjectStatus(project,this.STATUS.STOP);
+		return this.generateResult("remove","string",
+				this.doAction(this.ACTION.POST,"/remove","project="+URLEncoder.encode(project,this.CHARSET.UTF_8)));
 	}
 	
 }

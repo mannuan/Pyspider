@@ -8,19 +8,20 @@ public class Demo {
 		PySpider pyspider = new PySpider("127.0.0.1");
 		
 //		System.out.println(pyspider.getDebugPage("test127"));
-//		System.out.println(pyspider.debugProject("test127"));
-//
+
 //		System.out.println(pyspider.getIndexPage());
-		System.out.println(pyspider.runProject("test127"));
-//
+
 //		System.out.println(pyspider.getTaskPage("test127", pyspider.getRandomTaskID("test127")));
 //		System.out.println(pyspider.getTasksPage("test127"));
 
 //		System.out.println(pyspider.getResultsPage("test127"));
-//		System.out.println(pyspider.createProject("test127",script1));
-//		System.out.println(pyspider.StandardRun("test789",script1,pyspider.STATUS.RUNNING));
 
-//		System.out.println(pyspider.getRandomTaskID("test127"));
+		System.out.println(pyspider.createProject("test127",script1));
+		System.out.println(pyspider.debugProject("test127"));
+		System.out.println(pyspider.startProject("test127"));
+		System.out.println(pyspider.stopProject("test127"));
+//		System.out.println(pyspider.removeProject("test127"));
+
 	}
 
 }

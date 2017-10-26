@@ -2,6 +2,8 @@ import java.sql.*;
 
 public class projectdb {
 
+    public static String project = "test127";
+
     public static void main(String[] args) throws ClassNotFoundException
     {
         // load the sqlite-JDBC driver using the current class loader
@@ -16,25 +18,26 @@ public class projectdb {
                     System.getProperty("user.home")));
             Statement statement = connection.createStatement();
             statement.setQueryTimeout(30);  // set timeout to 30 sec.
+            statement.executeUpdate(String.format("delete from projectdb where name='%s';",project));
 
-//            statement.executeUpdate("drop table if exists person");
-//            statement.executeUpdate("create table person (id integer, name string)");
-//            statement.executeUpdate("insert into person values(1, 'leo')");
-//            statement.executeUpdate("insert into person values(2, 'yui')");
-            ResultSet rs = statement.executeQuery("SELECT * FROM `projectdb`");
-            while(rs.next())
-            {
-                // read the result set
-                System.out.print("name = " + rs.getString("name")+"\t");
-                System.out.print("group = " + rs.getInt("group")+"\t");
-                System.out.print("status = " + rs.getString("status")+"\t");
-                System.out.print("script = " + rs.getString("script")+"\t");
-                System.out.print("comments = " + rs.getString("comments")+"\t");
-                System.out.print("rate = " + rs.getInt("rate")+"\t");
-                System.out.print("burst = " + rs.getInt("burst")+"\t");
-                System.out.print("updatetime = " + rs.getString("updatetime")+"\t");
-                System.out.println();
-            }
+            // create a database connection
+            connection = DriverManager.getConnection(
+                    String.format("jdbc:sqlite:%s/data/task.db",
+                            System.getProperty("user.home")));
+            statement = connection.createStatement();
+            statement.setQueryTimeout(30);  // set timeout to 30 sec.
+            statement.executeUpdate(String.format("drop table taskdb_%s;",project));
+
+            // create a database connection
+            connection = DriverManager.getConnection(
+                    String.format("jdbc:sqlite:%s/data/result.db",
+                            System.getProperty("user.home")));
+            statement = connection.createStatement();
+            statement.setQueryTimeout(30);  // set timeout to 30 sec.
+            statement.executeUpdate(String.format("drop table resultdb_%s;",project));
+
+            System.out.println("ok");
+
         }
         catch(SQLException e)
         {

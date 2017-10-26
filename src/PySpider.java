@@ -16,6 +16,10 @@ import java.io.OutputStreamWriter;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.net.URLEncoder;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -30,9 +34,12 @@ public class PySpider {
 	private String END = "\r\n";
 	private Charset CHARSET = new Charset();
 	private Action ACTION = new Action();
-	public ObjectMapper OBJECTMAPPER = new ObjectMapper();
-	public Status STATUS = new Status();
+	private ObjectMapper OBJECTMAPPER = new ObjectMapper();
+	private Status STATUS = new Status();
 	public Format FORMAT = new Format();
+	private ConnectionURL CONNECTIONURL = new ConnectionURL();
+	private String LOADMODULES = "from pyspider.libs.base_handler import *\nfrom urllib import request\nimport datetime,time,pymysql,json,requestsrequests,re\n";
+	private String CRAWL_CONFIG = "{\"headers\":{\"Proxy-Connection\": \"keep-alive\",\"Pragma\": \"no-cache\",\"Cache-Control\": \"no-cache\",\"User-Agent\": \"Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36\",\"Accept\": \"text/css,*/*;q=0.1\",\"DNT\": \"1\",\"Accept-Encoding\": \"gzip, deflate, sdch, br\",\"Accept-Language\": \"zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4\",}}";
 
 	class Charset{
 		public String UTF_8 = "UTF-8";
@@ -53,6 +60,14 @@ public class PySpider {
 		public String JSON = "json";
 		public String TXT = "txt";
 		public String CSV = "csv";
+	}
+	class ConnectionURL{
+		public String PROJECTDB = String.format("jdbc:sqlite:%s/data/project.db",
+				System.getProperty("user.home"));
+		public String TASKDB = String.format("jdbc:sqlite:%s/data/task.db",
+				System.getProperty("user.home"));
+		public String RESULTDB = String.format("jdbc:sqlite:%s/data/result.db",
+				System.getProperty("user.home"));
 	}
 	
 	PySpider(){
@@ -237,7 +252,7 @@ public class PySpider {
 	 * @return
 	 * @throws IOException
 	 */
-	private String getCounter() throws IOException{
+	public String getCounter() throws IOException{
 		return this.doAction(this.ACTION.GET,"/counter",null);
 	}
 
@@ -247,7 +262,7 @@ public class PySpider {
 	 * @return
 	 * @throws IOException
 	 */
-	private String getQueues() throws IOException{
+	public String getQueues() throws IOException{
 		return this.doAction(this.ACTION.GET,"/queues",null);
 	}
 
@@ -322,7 +337,7 @@ public class PySpider {
 	 * @return
 	 * @throws IOException
 	 */
-	private String getResultsFormat(String project,String format) throws IOException{
+	public String getResultsFormat(String project,String format) throws IOException{
 		return this.doAction(this.ACTION.GET,"/results/dump/"+project+"."+format,null);
 	}
 
@@ -373,6 +388,47 @@ public class PySpider {
 	}
 
 	/**
+	 *
+	 * @param project
+	 * @param script
+	 * @return
+	 * @throws IOException
+	 */
+	public String updateProject(String project,String script)throws IOException{
+		return this.generateResult("update","string",this.saveScript(project,script));
+	}
+
+	/**
+	 *
+	 * @param project
+	 * @param group
+	 * @return
+	 * @throws IOException
+	 */
+	public String updateProjectGroup(String project,String group)throws IOException{
+		String data = "pk=" + URLEncoder.encode(project,this.CHARSET.UTF_8) +
+				"&name=" + URLEncoder.encode("group",this.CHARSET.UTF_8) +
+				"&value=" + URLEncoder.encode(group,this.CHARSET.UTF_8);
+		return this.doAction(this.ACTION.POST,"/update",data);
+	}
+
+	/**
+	 *
+	 * @param project
+	 * @param rate
+	 * @param burst
+	 * @return
+	 * @throws IOException
+	 */
+	public String updateProjectRate(String project,int rate,int burst)throws IOException{
+		String rate_burst = rate+"/"+burst;
+		String data = "pk=" + URLEncoder.encode(project,this.CHARSET.UTF_8) +
+				"&name=" + URLEncoder.encode("rate",this.CHARSET.UTF_8) +
+				"&value=" + URLEncoder.encode(rate_burst,this.CHARSET.UTF_8);
+		return this.doAction(this.ACTION.POST,"/update",data);
+	}
+
+	/**
 	 * 调试一个项目
 	 * @param project
 	 * @return
@@ -407,5 +463,58 @@ public class PySpider {
 	public String stopProject(String project)throws IOException{
 		return this.generateResult("stop","string",this.changeProjectStatus(project,this.STATUS.STOP));
 	}
+
+	/**
+	 * 删除一个项目
+	 * @param project
+	 * @return
+	 * @throws ClassNotFoundException
+	 * @throws IOException
+	 * @throws AWTException
+	 */
+	public String removeProject(String project) throws ClassNotFoundException, IOException, AWTException {
+		this.stopProject(project);
+		Robot r = new Robot();//执行完上面一条必须等待改变项目的运行状态为运行，才可以正式运行项目
+		r.delay(1000);//ms
+		// load the sqlite-JDBC driver using the current class loader
+		Class.forName("org.sqlite.JDBC");
+		Connection connection = null;
+		try
+		{
+			// create a database connection
+			connection = DriverManager.getConnection(this.CONNECTIONURL.PROJECTDB);
+			Statement statement = connection.createStatement();
+			statement.setQueryTimeout(30);  // set timeout to 30 sec.
+			statement.executeUpdate(String.format("delete from projectdb where name='%s';",project));
+
+			// create a database connection
+			connection = DriverManager.getConnection(this.CONNECTIONURL.TASKDB);
+			statement = connection.createStatement();
+			statement.setQueryTimeout(30);  // set timeout to 30 sec.
+			statement.executeUpdate(String.format("drop table taskdb_%s;",project));
+
+			// create a database connection
+			connection = DriverManager.getConnection(this.CONNECTIONURL.RESULTDB);
+			statement = connection.createStatement();
+			statement.setQueryTimeout(30);  // set timeout to 30 sec.
+			statement.executeUpdate(String.format("drop table resultdb_%s;",project));
+
+			return this.generateResult("remove","String","ok");
+
+		}catch(SQLException e){
+			// if the error message is "out of memory",
+			// it probably means no database file is found
+			return this.generateResult("remove","String",e.getMessage());
+		}finally{
+			try{
+				if(connection != null)
+					connection.close();
+			}catch(SQLException e){
+				// connection close failed.
+				return this.generateResult("remove","String",e.getMessage());
+			}
+		}
+	}
+
 
 }

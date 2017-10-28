@@ -21,10 +21,10 @@ public class Demo {
 //		System.out.println(pyspider.createProject(project,""));
 //		System.out.println(pyspider.updateProject(project,script));
 //		System.out.println(pyspider.debugProject(project));
-		System.out.println(pyspider.startProject(project));
+//		System.out.println(pyspider.startProject(project));
 //		System.out.println(pyspider.updateProjectGroup(project,"123456"));
 //		System.out.println(pyspider.updateProjectRate(project,1,3));
-//		System.out.println(pyspider.getCounter());
+		System.out.println(pyspider.getCounter());
 //		System.out.println(pyspider.getQueues());
 //		System.out.println(pyspider.stopProject(project));
 //		System.out.println(pyspider.removeProject(project));

@@ -129,11 +129,13 @@ public class PySpider {
 					data,END);
 			wr.write(packet);
 		}else if(action.equals(this.ACTION.GET)) {
-			wr.write(String.format("%s %s HTTP/1.0%s"
-					+ "HOST:%s%s"
-					+ "%s",action,path,END,
+			String packet = String.format("%s %s HTTP/1.0%s"
+							+ "HOST:%s%s"
+							+ "%s",action,path,END,
 					this.HOST,END,
-					END));
+					END);
+			wr.write(packet);
+			System.out.println(packet);
 		}
 		wr.flush();
 		// 读取返回信息

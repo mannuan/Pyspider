@@ -2,59 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33ecc9a4-8a69-498f-9400-fc7f2e238182" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/bootstrap-editable.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/index.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/sortable-theme-bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/vue.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/app.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/bench_test.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/debug.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/index.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/login.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/result.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/static/.babelrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/static/css/bootstrap-editable.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/static/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/static/css/sortable-theme-bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/static/css_selector_helper.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/static/debug.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/static/debug.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/static/index.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/static/index.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/static/js/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/static/js/vue.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/static/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/static/result.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/static/result.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/static/src/css_selector_helper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/static/src/debug.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/static/src/debug.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/static/src/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/static/src/index.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/static/src/result.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/static/src/splitter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/static/src/task.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/static/src/tasks.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/static/src/variable.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/static/task.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/static/task.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/static/tasks.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/static/tasks.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/static/webpack.config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/task.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/templates/debug.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/templates/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/templates/result.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/templates/task.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/templates/tasks.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/webdav.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/static/js/bootstrap-editable.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/static/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/static/js/sortable.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Demo.java" afterPath="$PROJECT_DIR$/src/Demo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PySpider.java" afterPath="$PROJECT_DIR$/src/PySpider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webui/static/js/jquery.min.js" afterPath="$PROJECT_DIR$/webui/static/js/jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webui/templates/index.html" afterPath="$PROJECT_DIR$/webui/templates/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,18 +18,25 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webui/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="185" column="6" lean-forward="false" selection-start-line="185" selection-start-column="6" selection-end-line="185" selection-end-column="6" />
+            <state relative-caret-position="329">
+              <caret line="179" column="50" lean-forward="true" selection-start-line="179" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#2;n#tr#1;n#table#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#2;n#tr#2;n#table#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#3;n#tr#2;n#table#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#4852#4858#1" expanded="false" />
+                <element signature="e#4911#4917#1" expanded="false" />
+                <element signature="e#4949#4955#1" expanded="false" />
+                <element signature="e#4987#4993#0" expanded="false" />
+                <element signature="e#4993#4999#0" expanded="false" />
+                <element signature="e#4999#5005#0" expanded="false" />
+                <element signature="e#5005#5011#0" expanded="false" />
+                <element signature="e#5011#5017#0" expanded="false" />
+                <element signature="e#5017#5023#0" expanded="false" />
+                <element signature="e#5023#5029#0" expanded="false" />
+                <element signature="e#5029#5035#0" expanded="false" />
+                <element signature="e#5035#5041#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -98,6 +58,7 @@
       <find>19lou</find>
       <find>queue</find>
       <find>scheduler2fetcher</find>
+      <find>foreach</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -151,6 +112,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -172,14 +134,32 @@
               <item name="pyspider" type="b2602c69:ProjectViewProjectNode" />
               <item name="pyspider" type="462c0819:PsiDirectoryNode" />
               <item name="webui" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pyspider" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pyspider" type="462c0819:PsiDirectoryNode" />
+              <item name="webui" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pyspider" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pyspider" type="462c0819:PsiDirectoryNode" />
+              <item name="webui" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pyspider" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pyspider" type="462c0819:PsiDirectoryNode" />
+              <item name="webui" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -207,25 +187,26 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/springmvc" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/web/css" />
-      <recent name="$PROJECT_DIR$/web/js" />
-      <recent name="$PROJECT_DIR$/webui/static/js" />
-      <recent name="$PROJECT_DIR$/webui/static/css" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/webui/static/js" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/webui/static/js" />
+      <recent name="$PROJECT_DIR$/webui/static/css" />
+      <recent name="$PROJECT_DIR$/web/css" />
+      <recent name="$PROJECT_DIR$/web/js" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -427,14 +408,17 @@
       <workItem from="1509090370798" duration="2834000" />
       <workItem from="1509160279655" duration="13589000" />
       <workItem from="1509181752472" duration="13837000" />
+      <workItem from="1509201133906" duration="1230000" />
+      <workItem from="1509203232087" duration="1565000" />
+      <workItem from="1509240632738" duration="3968000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93893000" />
+    <option name="totallyTimeSpent" value="100656000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1680" height="990" extended-state="6" />
+    <frame x="0" y="27" width="1366" height="708" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -449,7 +433,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19345239" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.193265" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -465,6 +449,35 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988507" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25747126" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.193265" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -479,11 +492,73 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/webui/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#4852#4858#1" expanded="false" />
+            <element signature="e#4911#4917#1" expanded="false" />
+            <element signature="e#4949#4955#1" expanded="false" />
+            <element signature="e#4987#4993#0" expanded="false" />
+            <element signature="e#4993#4999#0" expanded="false" />
+            <element signature="e#4999#5005#0" expanded="false" />
+            <element signature="e#5005#5011#0" expanded="false" />
+            <element signature="e#5011#5017#0" expanded="false" />
+            <element signature="e#5017#5023#0" expanded="false" />
+            <element signature="e#5023#5029#0" expanded="false" />
+            <element signature="e#5029#5035#0" expanded="false" />
+            <element signature="e#5035#5041#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webui/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#4852#4858#1" expanded="false" />
+            <element signature="e#4911#4917#1" expanded="false" />
+            <element signature="e#4949#4955#1" expanded="false" />
+            <element signature="e#4987#4993#0" expanded="false" />
+            <element signature="e#4993#4999#0" expanded="false" />
+            <element signature="e#4999#5005#0" expanded="false" />
+            <element signature="e#5005#5011#0" expanded="false" />
+            <element signature="e#5011#5017#0" expanded="false" />
+            <element signature="e#5017#5023#0" expanded="false" />
+            <element signature="e#5023#5029#0" expanded="false" />
+            <element signature="e#5029#5035#0" expanded="false" />
+            <element signature="e#5035#5041#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webui/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#4852#4858#1" expanded="false" />
+            <element signature="e#4911#4917#1" expanded="false" />
+            <element signature="e#4949#4955#1" expanded="false" />
+            <element signature="e#4987#4993#0" expanded="false" />
+            <element signature="e#4993#4999#0" expanded="false" />
+            <element signature="e#4999#5005#0" expanded="false" />
+            <element signature="e#5005#5011#0" expanded="false" />
+            <element signature="e#5011#5017#0" expanded="false" />
+            <element signature="e#5017#5023#0" expanded="false" />
+            <element signature="e#5023#5029#0" expanded="false" />
+            <element signature="e#5029#5035#0" expanded="false" />
+            <element signature="e#5035#5041#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Demo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -498,7 +573,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="24" column="59" lean-forward="false" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -513,7 +587,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="13" column="59" lean-forward="true" selection-start-line="13" selection-start-column="59" selection-end-line="13" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -521,73 +594,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4086">
           <caret line="238" column="7" lean-forward="true" selection-start-line="238" selection-start-column="7" selection-end-line="238" selection-end-column="7" />
-          <folding>
-            <element signature="class#Charset#0;class#PySpider#0" expanded="false" />
-            <element signature="class#Action#0;class#PySpider#0" expanded="false" />
-            <element signature="class#Status#0;class#PySpider#0" expanded="false" />
-            <element signature="class#Format#0;class#PySpider#0" expanded="false" />
-            <element signature="class#ConnectionURL#0;class#PySpider#0" expanded="false" />
-            <element signature="method#PySpider#0;class#PySpider#0" expanded="false" />
-            <element signature="method#PySpider#3;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#generateResult#0;class#PySpider#0" expanded="false" />
-            <element signature="method#generateResult#0;class#PySpider#0" expanded="false" />
-            <element signature="e#2992#3029#0" expanded="false" />
-            <element signature="docComment;method#doAction#0;class#PySpider#0" expanded="false" />
-            <element signature="e#4538#4575#0" expanded="false" />
-            <element signature="docComment;method#saveScript#0;class#PySpider#0" expanded="false" />
-            <element signature="method#saveScript#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#getScript#0;class#PySpider#0" expanded="false" />
-            <element signature="method#getScript#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#getDebugPage#0;class#PySpider#0" expanded="false" />
-            <element signature="method#getDebugPage#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#debugRunProject#0;class#PySpider#0" expanded="false" />
-            <element signature="method#debugRunProject#0;class#PySpider#0" expanded="false" />
-            <element signature="e#6237#6274#0" expanded="false" />
-            <element signature="docComment;method#getIndexPage#0;class#PySpider#0" expanded="false" />
-            <element signature="method#getIndexPage#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#changeProjectStatus#0;class#PySpider#0" expanded="false" />
-            <element signature="method#changeProjectStatus#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#runProject#0;class#PySpider#0" expanded="false" />
-            <element signature="method#runProject#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#getCounter#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#getQueues#0;class#PySpider#0" expanded="false" />
-            <element signature="method#getQueues#0;class#PySpider#0" expanded="false" />
-            <element signature="e#7589#7626#0" expanded="false" />
-            <element signature="docComment;method#getTaskPage#0;class#PySpider#0" expanded="false" />
-            <element signature="method#getTaskPage#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#getTask#0;class#PySpider#0" expanded="false" />
-            <element signature="method#getTask#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#getTasksPage#0;class#PySpider#0" expanded="false" />
-            <element signature="method#getTasksPage#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#getActiveTasks#0;class#PySpider#0" expanded="false" />
-            <element signature="method#getActiveTasks#0;class#PySpider#0" expanded="false" />
-            <element signature="e#8738#8775#0" expanded="false" />
-            <element signature="docComment;method#getResultsPage#0;class#PySpider#0" expanded="false" />
-            <element signature="method#getResultsPage#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#getResultsFormat#0;class#PySpider#0" expanded="false" />
-            <element signature="method#getResultsFormat#0;class#PySpider#0" expanded="false" />
-            <element signature="e#9383#9420#0" expanded="false" />
-            <element signature="docComment;method#getTaskIDArray#0;class#PySpider#0" expanded="false" />
-            <element signature="method#getTaskIDArray#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#getRandomTaskID#0;class#PySpider#0" expanded="false" />
-            <element signature="method#getRandomTaskID#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#createProject#0;class#PySpider#0" expanded="false" />
-            <element signature="method#createProject#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#updateProject#0;class#PySpider#0" expanded="false" />
-            <element signature="method#updateProject#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#updateProjectGroup#0;class#PySpider#0" expanded="false" />
-            <element signature="method#updateProjectGroup#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#updateProjectRate#0;class#PySpider#0" expanded="false" />
-            <element signature="method#updateProjectRate#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#debugProject#0;class#PySpider#0" expanded="false" />
-            <element signature="method#debugProject#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#startProject#0;class#PySpider#0" expanded="false" />
-            <element signature="method#startProject#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#stopProject#0;class#PySpider#0" expanded="false" />
-            <element signature="method#stopProject#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#removeProject#0;class#PySpider#0" expanded="false" />
-            <element signature="e#14207#14250#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -672,36 +678,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webui/static/js/vue.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webui/static/js/jquery.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="3" column="15718" lean-forward="false" selection-start-line="3" selection-start-column="15718" selection-end-line="3" selection-end-column="15718" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/templates/index.html" />
-    <entry file="file://$PROJECT_DIR$/webui/static/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="6" column="2252" lean-forward="true" selection-start-line="6" selection-start-column="2252" selection-end-line="6" selection-end-column="2252" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -709,7 +697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -717,7 +704,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -725,7 +711,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -733,10 +718,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding>
-            <marker date="1508980070593" expanded="true" signature="751:788" ph="delete from " />
-            <marker date="1508980070593" expanded="true" signature="1204:1224" ph="drop table t... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -744,73 +725,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
           <caret line="256" column="18" lean-forward="false" selection-start-line="256" selection-start-column="18" selection-end-line="256" selection-end-column="18" />
-          <folding>
-            <element signature="class#Charset#0;class#PySpider#0" expanded="false" />
-            <element signature="class#Action#0;class#PySpider#0" expanded="false" />
-            <element signature="class#Status#0;class#PySpider#0" expanded="false" />
-            <element signature="class#Format#0;class#PySpider#0" expanded="false" />
-            <element signature="class#ConnectionURL#0;class#PySpider#0" expanded="false" />
-            <element signature="method#PySpider#0;class#PySpider#0" expanded="false" />
-            <element signature="method#PySpider#3;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#generateResult#0;class#PySpider#0" expanded="false" />
-            <element signature="method#generateResult#0;class#PySpider#0" expanded="false" />
-            <element signature="e#2992#3029#0" expanded="false" />
-            <element signature="docComment;method#doAction#0;class#PySpider#0" expanded="false" />
-            <element signature="e#4538#4575#0" expanded="false" />
-            <element signature="docComment;method#saveScript#0;class#PySpider#0" expanded="false" />
-            <element signature="method#saveScript#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#getScript#0;class#PySpider#0" expanded="false" />
-            <element signature="method#getScript#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#getDebugPage#0;class#PySpider#0" expanded="false" />
-            <element signature="method#getDebugPage#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#debugRunProject#0;class#PySpider#0" expanded="false" />
-            <element signature="method#debugRunProject#0;class#PySpider#0" expanded="false" />
-            <element signature="e#6237#6274#0" expanded="false" />
-            <element signature="docComment;method#getIndexPage#0;class#PySpider#0" expanded="false" />
-            <element signature="method#getIndexPage#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#changeProjectStatus#0;class#PySpider#0" expanded="false" />
-            <element signature="method#changeProjectStatus#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#runProject#0;class#PySpider#0" expanded="false" />
-            <element signature="method#runProject#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#getCounter#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#getQueues#0;class#PySpider#0" expanded="false" />
-            <element signature="method#getQueues#0;class#PySpider#0" expanded="false" />
-            <element signature="e#7589#7626#0" expanded="false" />
-            <element signature="docComment;method#getTaskPage#0;class#PySpider#0" expanded="false" />
-            <element signature="method#getTaskPage#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#getTask#0;class#PySpider#0" expanded="false" />
-            <element signature="method#getTask#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#getTasksPage#0;class#PySpider#0" expanded="false" />
-            <element signature="method#getTasksPage#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#getActiveTasks#0;class#PySpider#0" expanded="false" />
-            <element signature="method#getActiveTasks#0;class#PySpider#0" expanded="false" />
-            <element signature="e#8738#8775#0" expanded="false" />
-            <element signature="docComment;method#getResultsPage#0;class#PySpider#0" expanded="false" />
-            <element signature="method#getResultsPage#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#getResultsFormat#0;class#PySpider#0" expanded="false" />
-            <element signature="method#getResultsFormat#0;class#PySpider#0" expanded="false" />
-            <element signature="e#9383#9420#0" expanded="false" />
-            <element signature="docComment;method#getTaskIDArray#0;class#PySpider#0" expanded="false" />
-            <element signature="method#getTaskIDArray#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#getRandomTaskID#0;class#PySpider#0" expanded="false" />
-            <element signature="method#getRandomTaskID#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#createProject#0;class#PySpider#0" expanded="false" />
-            <element signature="method#createProject#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#updateProject#0;class#PySpider#0" expanded="false" />
-            <element signature="method#updateProject#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#updateProjectGroup#0;class#PySpider#0" expanded="false" />
-            <element signature="method#updateProjectGroup#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#updateProjectRate#0;class#PySpider#0" expanded="false" />
-            <element signature="method#updateProjectRate#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#debugProject#0;class#PySpider#0" expanded="false" />
-            <element signature="method#debugProject#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#startProject#0;class#PySpider#0" expanded="false" />
-            <element signature="method#startProject#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#stopProject#0;class#PySpider#0" expanded="false" />
-            <element signature="method#stopProject#0;class#PySpider#0" expanded="false" />
-            <element signature="docComment;method#removeProject#0;class#PySpider#0" expanded="false" />
-            <element signature="e#14207#14250#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -818,20 +732,49 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="603">
           <caret line="26" column="40" lean-forward="true" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webui/static/js/vue.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="5" column="20965" lean-forward="false" selection-start-line="5" selection-start-column="20958" selection-end-line="5" selection-end-column="20965" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webui/static/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="6" column="2252" lean-forward="true" selection-start-line="6" selection-start-column="2252" selection-end-line="6" selection-end-column="2252" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webui/static/js/bootstrap.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webui/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="185" column="6" lean-forward="false" selection-start-line="185" selection-start-column="6" selection-end-line="185" selection-end-column="6" />
+        <state relative-caret-position="329">
+          <caret line="179" column="50" lean-forward="true" selection-start-line="179" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#2;n#tr#1;n#table#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#2;n#tr#2;n#table#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#3;n#tr#2;n#table#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#4852#4858#1" expanded="false" />
+            <element signature="e#4911#4917#1" expanded="false" />
+            <element signature="e#4949#4955#1" expanded="false" />
+            <element signature="e#4987#4993#0" expanded="false" />
+            <element signature="e#4993#4999#0" expanded="false" />
+            <element signature="e#4999#5005#0" expanded="false" />
+            <element signature="e#5005#5011#0" expanded="false" />
+            <element signature="e#5011#5017#0" expanded="false" />
+            <element signature="e#5017#5023#0" expanded="false" />
+            <element signature="e#5023#5029#0" expanded="false" />
+            <element signature="e#5029#5035#0" expanded="false" />
+            <element signature="e#5035#5041#0" expanded="false" />
           </folding>
         </state>
       </provider>

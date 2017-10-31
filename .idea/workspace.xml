@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33ecc9a4-8a69-498f-9400-fc7f2e238182" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/static/js/bootstrap-editable.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/static/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webui/static/js/sortable.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webui/static/js/jquery.min.js" afterPath="$PROJECT_DIR$/webui/static/js/jquery.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webui/templates/index.html" afterPath="$PROJECT_DIR$/webui/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Demo.java" afterPath="$PROJECT_DIR$/src/Demo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PySpider.java" afterPath="$PROJECT_DIR$/src/PySpider.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,25 +15,26 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/webui/templates/index.html">
+    <leaf>
+      <file leaf-file-name="Demo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Demo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="179" column="50" lean-forward="true" selection-start-line="179" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
+            <state relative-caret-position="216">
+              <caret line="5" column="1026" lean-forward="true" selection-start-line="5" selection-start-column="1026" selection-end-line="5" selection-end-column="1026" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PySpider.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/PySpider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3042">
+              <caret line="1178" column="38" lean-forward="true" selection-start-line="1178" selection-start-column="38" selection-end-line="1178" selection-end-column="38" />
               <folding>
-                <element signature="e#4852#4858#1" expanded="false" />
-                <element signature="e#4911#4917#1" expanded="false" />
-                <element signature="e#4949#4955#1" expanded="false" />
-                <element signature="e#4987#4993#0" expanded="false" />
-                <element signature="e#4993#4999#0" expanded="false" />
-                <element signature="e#4999#5005#0" expanded="false" />
-                <element signature="e#5005#5011#0" expanded="false" />
-                <element signature="e#5011#5017#0" expanded="false" />
-                <element signature="e#5017#5023#0" expanded="false" />
-                <element signature="e#5023#5029#0" expanded="false" />
-                <element signature="e#5029#5035#0" expanded="false" />
-                <element signature="e#5035#5041#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#41934#41935#0" expanded="true" />
+                <element signature="e#41957#41958#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -79,10 +77,10 @@
         <option value="$PROJECT_DIR$/sql/repository.sql" />
         <option value="$PROJECT_DIR$/py/19louNoteAndComment" />
         <option value="$PROJECT_DIR$/src/test_jsoup.java" />
-        <option value="$PROJECT_DIR$/src/Demo.java" />
-        <option value="$PROJECT_DIR$/src/PySpider.java" />
         <option value="$PROJECT_DIR$/web/index.html" />
         <option value="$PROJECT_DIR$/webui/templates/index.html" />
+        <option value="$PROJECT_DIR$/src/PySpider.java" />
+        <option value="$PROJECT_DIR$/src/Demo.java" />
       </list>
     </option>
   </component>
@@ -112,13 +110,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="pyspider" type="b2602c69:ProjectViewProjectNode" />
               <item name="pyspider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pyspider" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pyspider" type="462c0819:PsiDirectoryNode" />
+              <item name="sql" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pyspider" type="b2602c69:ProjectViewProjectNode" />
@@ -130,36 +132,11 @@
               <item name="pyspider" type="462c0819:PsiDirectoryNode" />
               <item name="webui" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="pyspider" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pyspider" type="462c0819:PsiDirectoryNode" />
-              <item name="webui" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pyspider" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pyspider" type="462c0819:PsiDirectoryNode" />
-              <item name="webui" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pyspider" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pyspider" type="462c0819:PsiDirectoryNode" />
-              <item name="webui" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pyspider" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pyspider" type="462c0819:PsiDirectoryNode" />
-              <item name="webui" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -171,6 +148,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -187,7 +165,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -411,29 +388,34 @@
       <workItem from="1509201133906" duration="1230000" />
       <workItem from="1509203232087" duration="1565000" />
       <workItem from="1509240632738" duration="3968000" />
+      <workItem from="1509253409661" duration="585000" />
+      <workItem from="1509256518010" duration="157000" />
+      <workItem from="1509267329503" duration="29000" />
+      <workItem from="1509348230610" duration="17139000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100656000" />
+    <option name="totallyTimeSpent" value="118566000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1366" height="708" extended-state="6" />
+    <frame x="0" y="27" width="1680" height="990" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988507" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25747126" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27586207" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.193265" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19285715" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -445,7 +427,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988507" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -496,20 +477,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#4852#4858#1" expanded="false" />
-            <element signature="e#4911#4917#1" expanded="false" />
-            <element signature="e#4949#4955#1" expanded="false" />
-            <element signature="e#4987#4993#0" expanded="false" />
-            <element signature="e#4993#4999#0" expanded="false" />
-            <element signature="e#4999#5005#0" expanded="false" />
-            <element signature="e#5005#5011#0" expanded="false" />
-            <element signature="e#5011#5017#0" expanded="false" />
-            <element signature="e#5017#5023#0" expanded="false" />
-            <element signature="e#5023#5029#0" expanded="false" />
-            <element signature="e#5029#5035#0" expanded="false" />
-            <element signature="e#5035#5041#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -517,20 +484,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#4852#4858#1" expanded="false" />
-            <element signature="e#4911#4917#1" expanded="false" />
-            <element signature="e#4949#4955#1" expanded="false" />
-            <element signature="e#4987#4993#0" expanded="false" />
-            <element signature="e#4993#4999#0" expanded="false" />
-            <element signature="e#4999#5005#0" expanded="false" />
-            <element signature="e#5005#5011#0" expanded="false" />
-            <element signature="e#5011#5017#0" expanded="false" />
-            <element signature="e#5017#5023#0" expanded="false" />
-            <element signature="e#5023#5029#0" expanded="false" />
-            <element signature="e#5029#5035#0" expanded="false" />
-            <element signature="e#5035#5041#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -538,20 +491,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#4852#4858#1" expanded="false" />
-            <element signature="e#4911#4917#1" expanded="false" />
-            <element signature="e#4949#4955#1" expanded="false" />
-            <element signature="e#4987#4993#0" expanded="false" />
-            <element signature="e#4993#4999#0" expanded="false" />
-            <element signature="e#4999#5005#0" expanded="false" />
-            <element signature="e#5005#5011#0" expanded="false" />
-            <element signature="e#5011#5017#0" expanded="false" />
-            <element signature="e#5017#5023#0" expanded="false" />
-            <element signature="e#5023#5029#0" expanded="false" />
-            <element signature="e#5029#5035#0" expanded="false" />
-            <element signature="e#5035#5041#0" expanded="false" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webui/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -656,13 +602,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sql/repository.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="26" column="44" lean-forward="true" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/static/src/debug.js" />
     <entry file="file://$PROJECT_DIR$/webui/app.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -721,20 +660,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PySpider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="256" column="18" lean-forward="false" selection-start-line="256" selection-start-column="18" selection-end-line="256" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Demo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="26" column="40" lean-forward="true" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webui/static/js/vue.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -746,35 +671,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="6" column="2252" lean-forward="true" selection-start-line="6" selection-start-column="2252" selection-end-line="6" selection-end-column="2252" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webui/static/js/bootstrap.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/webui/static/js/bootstrap.min.js" />
     <entry file="file://$PROJECT_DIR$/webui/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="179" column="50" lean-forward="true" selection-start-line="179" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
+        <state relative-caret-position="611">
+          <caret line="170" column="20" lean-forward="true" selection-start-line="170" selection-start-column="20" selection-end-line="170" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/repository.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="26" column="44" lean-forward="true" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Demo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="5" column="1026" lean-forward="true" selection-start-line="5" selection-start-column="1026" selection-end-line="5" selection-end-column="1026" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PySpider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3042">
+          <caret line="1178" column="38" lean-forward="true" selection-start-line="1178" selection-start-column="38" selection-end-line="1178" selection-end-column="38" />
           <folding>
-            <element signature="e#4852#4858#1" expanded="false" />
-            <element signature="e#4911#4917#1" expanded="false" />
-            <element signature="e#4949#4955#1" expanded="false" />
-            <element signature="e#4987#4993#0" expanded="false" />
-            <element signature="e#4993#4999#0" expanded="false" />
-            <element signature="e#4999#5005#0" expanded="false" />
-            <element signature="e#5005#5011#0" expanded="false" />
-            <element signature="e#5011#5017#0" expanded="false" />
-            <element signature="e#5017#5023#0" expanded="false" />
-            <element signature="e#5023#5029#0" expanded="false" />
-            <element signature="e#5029#5035#0" expanded="false" />
-            <element signature="e#5035#5041#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#41934#41935#0" expanded="true" />
+            <element signature="e#41957#41958#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -7,7 +7,7 @@ public class Demo {
 
 		String script1 = "#!/usr/bin/env python\n# -*- encoding: utf-8 -*-\n# Created on 2017-10-21 20:34:19\n# Project: wjl\n\nfrom pyspider.libs.base_handler import *\n\n\nclass Handler(BaseHandler):\n    crawl_config = {\n    }\n\n    @every(minutes=24 * 60)\n    def on_start(self):\n        self.crawl('www.baidu.com', callback=self.index_page)\n\n    @config(age=10 * 24 * 60 * 60)\n    def index_page(self, response):\n        for each in response.doc('a[href^=\"http\"]').items():\n            self.crawl(each.attr.href, callback=self.detail_page)\n\n    @config(priority=2)\n    def detail_page(self, response):\n        return {\n            \"url\": response.url,\n            \"title\": response.doc('title').text(),\n        }";
 		PySpider pyspider = new PySpider("127.0.0.1");
-		String project = "19louNoteAndComment";
+		String project = "test127";
 		
 //		System.out.println(pyspider.getDebugPage("test127"));
 
@@ -17,14 +17,13 @@ public class Demo {
 //		System.out.println(pyspider.getTasksPage("test127"));
 
 //		System.out.println(pyspider.getResultsPage("test127"));
-
-//		System.out.println(pyspider.createProject(project,""));
-//		System.out.println(pyspider.updateProject(project,script));
+		System.out.println(pyspider.createProject(project,pyspider.WANFANG.name));
+		System.out.println(pyspider.updateProject(project,new ArrayList<>(),new ArrayList<>()));
 //		System.out.println(pyspider.debugProject(project));
 //		System.out.println(pyspider.startProject(project));
 //		System.out.println(pyspider.updateProjectGroup(project,"123456"));
 //		System.out.println(pyspider.updateProjectRate(project,1,3));
-		System.out.println(pyspider.getCounter());
+//		System.out.println(pyspider.getCounter());
 //		System.out.println(pyspider.getQueues());
 //		System.out.println(pyspider.stopProject(project));
 //		System.out.println(pyspider.removeProject(project));

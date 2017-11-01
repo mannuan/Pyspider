@@ -141,3 +141,15 @@ CREATE TABLE `zhejiang_water` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
+DROP TABLE IF EXISTS `shuiliting`;
+CREATE TABLE `shuiliting` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `title` text NOT NULL,
+  `url` text NOT NULL,
+  `context` text,
+  `crawl_time` varchar(100) NOT NULL,
+  `publish_time` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
